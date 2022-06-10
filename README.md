@@ -1,4 +1,5 @@
 Clase 13: Ejercicio - Billetera
+
 Crear una clase Billetera que tenga las siguientes propiedades públicas del tipo entero:
 
 BilletesDe10
