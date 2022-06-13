@@ -27,6 +27,21 @@ namespace introNET6._0_Clase13.Modelo
             return billetesDe10 * 10 + billetesDe20 * 20 + billetesDe50 * 50 + billetesDe100 * 100 + billetesDe200 * 200 + billetesDe500 * 500 + billetesDe1000 * 1000;
         }
 
+        public Billetera CombinarBilleteras(Billetera otraBilletera)
+        {
+            var billeteraNueva = new Billetera()
+            {
+                BilletesDe10 = BilletesDe10 + otraBilletera.BilletesDe10,
+                BilletesDe20 = BilletesDe20 + otraBilletera.BilletesDe20,
+                BilletesDe50 = BilletesDe50 + otraBilletera.BilletesDe50,
+                BilletesDe100 = BilletesDe100 + otraBilletera.BilletesDe100,
+                BilletesDe200 = BilletesDe200 + otraBilletera.BilletesDe200,
+                BilletesDe500 = BilletesDe500 + otraBilletera.BilletesDe500,
+                BilletesDe1000 = BilletesDe1000 + otraBilletera.BilletesDe1000,
+            };
+            return billeteraNueva;
+        }
+
         public void LimpiarBilletera()
         {
             BilletesDe10 = 0;

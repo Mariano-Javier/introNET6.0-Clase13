@@ -30,22 +30,7 @@ Console.WriteLine($"En la billetera 1 hay: {billetera1.TotalEnBilletera()} pesos
 //Usando los datos de billetera2.
 Console.WriteLine($"En la billetera 2 hay: {billetera2.TotalEnBilletera()} pesos");
 
-static Billetera combinar(Billetera billetera01, Billetera billetera02)
-{
-    var billeteraNueva = new Billetera()
-    {
-        BilletesDe10 = billetera01.BilletesDe10 + billetera02.BilletesDe10,
-        BilletesDe20 = billetera01.BilletesDe20 + billetera02.BilletesDe20,
-        BilletesDe50 = billetera01.BilletesDe50 + billetera02.BilletesDe50,
-        BilletesDe100 = billetera01.BilletesDe100 + billetera02.BilletesDe100,
-        BilletesDe200 = billetera01.BilletesDe200 + billetera02.BilletesDe200,
-        BilletesDe500 = billetera01.BilletesDe500 + billetera02.BilletesDe500,
-        BilletesDe1000 = billetera01.BilletesDe1000 + billetera02.BilletesDe1000,
-    };
-    return billeteraNueva;
-}
-
-var billetera3 = combinar(billetera1, billetera2);
+var billetera3 = billetera1.CombinarBilleteras(billetera2);
 
 billetera1.LimpiarBilletera();
 billetera2.LimpiarBilletera();
